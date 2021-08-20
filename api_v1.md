@@ -9,10 +9,10 @@ This REST API is designed to allow users to submit data to GH via other applicat
     - List of current (in spawn) resources
 - Required arguments
     - galaxy (int)
-    - auth_key (string)
 - Optional arguments
-    - TBC
-- example usage /api/v1/resources?galaxy=18&auth_key=blu3h4rv35t
+    - verified (int, 0 = Default, Either, 1 = Unverified Only, 2 = Verified Only)
+- example usage /api/v1/resources?galaxy=1&verified=2
+
 #### /api/v1/resources/resource
 - Methods
     - POST - Send new resource information
@@ -22,9 +22,13 @@ This REST API is designed to allow users to submit data to GH via other applicat
     - Specified resource name
 - Required arguments
     - galaxy (int)
-    - auth_key (string)
     - name (string)
-- example usage /api/v1/resources/resource?galaxy=18&auth_key=blu3h4rv35t&name=doofer
+    - planet (optional for GET)
+- Optional arguments
+    - verified (int, 0 = Default, Either, 1 = Unverified Only, 2 = Verified Only)
+
+
+- example usage /api/v1/resources/resource?galaxy=1&name=doofer
 
 ## Usage
 
